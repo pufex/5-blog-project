@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageHeading from "@/components/PageHeading";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -6,5 +7,7 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return    
+  return <PageHeading>
+    This is my Next JS app!
+  </PageHeading>
 }

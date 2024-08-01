@@ -1,8 +1,12 @@
+import Nav from "@/components/Nav";
 
-import { Inter } from "next/font/google";
+import { Titillium_Web } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const titilium_web = Titillium_Web({ 
+  subsets: ["latin"],
+  weight: ["400", "600", "700"]
+});
 
 export default function RootLayout({
   children,
@@ -11,7 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={titilium_web.className}>
+        <Nav />
+        <main className="w-full min-h-[calc(100vh-5rem)] bg-slate-200 p-4">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
